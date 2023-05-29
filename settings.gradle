@@ -1,0 +1,30 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        mavenLocal()
+        maven {
+            url("https://raw.githubusercontent.com/Nienter/maven/maven-repo/")
+        }
+    }
+
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+        maven {
+            url("https://raw.githubusercontent.com/Nienter/maven/maven-repo/")
+        }
+    }
+}
+rootProject.name = "MyPlugin"
+include ':app'
+include ':basePlugin'
+include ':hook-method-lib'
+//include ':hook-method-plugin'
+
+include ':hook-method-plugin'
